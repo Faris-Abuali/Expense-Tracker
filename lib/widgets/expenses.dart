@@ -29,9 +29,10 @@ class _ExpensesState extends State<Expenses> {
 
   void _openAddExpenseOverlay() {
     showModalBottomSheet(
+      useSafeArea: true,
+      isScrollControlled: true,
       context: context,
       builder: (ctx) => NewExpense(onAddExpense: _addExpense),
-      isScrollControlled: true,
     );
     /**
      * When you're in a class that extends State, Flutter automatically adds a 
